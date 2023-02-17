@@ -18,23 +18,23 @@ def MainMenu():
                 inputobject[value] = value
                 return inputobject
     """This program will draw visualisations of simple L-system curves."""
-    # start = input(
-    #     "Input starting variable or starting sequence (e.x A or A-F-G): ")
-    # iterations = int(input("How many iterations?: "))
-    # speed = int(input("How fast should we draw? (0-11): "))
-    # rules = clientinput(
-    #     "Input rule. Example (A->*****) Where * are the rules for variable present: ", False)
-    # angle = int(input("Input angle: "))
-    # size = int(input("Input the desired size: "))
-    start = "f-g-g"
-    iterations = 2
-    speed = 7
-    rules = {
-        "f-g+f+g-f": "f-g+f+g-f",
-        "gg": "gg"
-    }
-    angle = 120
-    size = 10
+    start = input(
+        "Input starting variable or starting sequence (e.x A or A-F-G): ")
+    iterations = int(input("How many iterations?: "))
+    speed = int(input("How fast should we draw? (0-11): "))
+    rules = clientinput(
+        "Input rule. Example (A->*****) Where * are the rules for variable present: ", False)
+    angle = int(input("Input angle: "))
+    size = int(input("Input the desired size: "))
+    # start = "f-g-g"
+    # iterations = 4
+    # speed = 11
+    # rules = {
+    #     "f-g+f+g-f": "f-g+f+g-f",
+    #     "gg": "gg"
+    # }
+    # angle = 120
+    # size = 10
 
     chardefinitions = {}
     for obj in rules:
@@ -87,12 +87,8 @@ def curveMain(definitions, rules, angle, start, levels, speed, size):
         if level == 0:
             turtle.forward(size)
             return
-
-        if startSequence:
-            for index, char in enumerate(start):
-                curverules[char](level-1)
         
-        for char in list(rules.items())[0][1] if is_a else list(rules.items())[1][1]:
+        for char in start if startSequence else list(rules.items())[0][1] if is_a else list(rules.items())[1][1]:
             curverules[char](level-1)
 
     if len(start) > 1:
@@ -101,6 +97,10 @@ def curveMain(definitions, rules, angle, start, levels, speed, size):
         RunCurve(levels)
     
     turtle.done()
+    if input("Draw a new one? Y/N: ").lower() == "y":
+        MainMenu()
+    else:
+        quit()
 
 
 if __name__ == "__main__":
