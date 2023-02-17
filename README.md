@@ -11,5 +11,5 @@ Example: Sierpinski triangle using a Sierpiński arrowhead curve L-system:
    - angle  : 60°
 </br>    
 Output:
-![image](https://user-images.githubusercontent.com/66220187/219710032-ff1c0ddc-af39-45ba-986f-2150d339da10.png)
+<img src="https://user-images.githubusercontent.com/66220187/219710032-ff1c0ddc-af39-45ba-986f-2150d339da10.png"></img>
 
