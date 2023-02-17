@@ -3,7 +3,7 @@ L-System visualizer made with python and turtle.
 
 <i>In progress.</i>
 
-Example: Sierpinski triangle using a Sierpiński arrowhead curve L-system:
+Example: First 8 iterations of Sierpinski triangle using a Sierpiński arrowhead curve L-system:
    - variables : A B
    - constants : + −
    - start  : A
