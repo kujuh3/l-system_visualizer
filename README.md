@@ -5,9 +5,6 @@ Usage:
 <code>pip install turtle</code> ->
 <code>python l-system.py</code>
 
-
-<i>In progress. For now only supports L-systems where 2 rules are present.</i>
-
 Example: 8 iterations of <a target="blank" href="https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle">Sierpinski triangle using a Sierpiński arrowhead curve L-system</a>:
    - variables : A B
    - constants : + −
